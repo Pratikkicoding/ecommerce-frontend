@@ -40,18 +40,31 @@ const Navbar = () => {
   <img
     src="/logo.png"
     alt="Dynique Bharat"
-    className="w-16 h-16 sm:w-12 sm:h-12 lg:w-18 lg:h-18 object-contain"
+    className="w-16 h-16 sm:w-14 sm:h-14 lg:w-18 lg:h-18 object-contain"
   />
 
-  <div className="leading-tight">
-    <h1 className="font-bold text-base sm:text-xl lg:text-xl text-[#A86B00]">
-      DYNIQUE BHARAT
-    </h1>
+ <div className="flex flex-col justify-center leading-none">
+  <h1
+    className="text-sm sm:text-xl lg:text-xl uppercase text-[#A86B00] text-center sm:text-left"
+    style={{
+      fontFamily: "Cinzel, serif",
+      fontWeight: 200,
+      letterSpacing: "0.225em",
+    }}
+  >
+    DYNIQUE BHARAT
+  </h1>
 
-    <p className="hidden md:block text-[10px] lg:text-xs uppercase tracking-[0.2em] text-gray-500">
-      Premium Collection
-    </p>
-  </div>
+  <p
+    className="text-[8px] sm:text-[10px] lg:text-xs uppercase text-gray-400 text-center sm:text-left mt-1"
+    style={{
+      fontFamily: "Cinzel, serif",
+      letterSpacing: "0.35em",
+    }}
+  >
+    Premium Collection
+  </p>
+</div>
 </a>
             {/* ================= DESKTOP MENU ================= */}
 

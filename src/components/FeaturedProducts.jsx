@@ -13,34 +13,34 @@ import tshirt9 from "../assets/tshirt9.webp";
 const products = [
   {
     id: 1,
-    name: "SKU-3 DADI'S SWAG",
+    name: "DADI'S SWAG",
     
     image: tshirt,
   },
   {
     id: 2,
-    name: "SKU-9 IRONMAN",
+    name: "IRONMAN",
     
     image: tshirt1,
   },
 
   {
     id: 3,
-    name: "SKU-5 PARLE-G",
+    name: "PARLE-G",
     
     image: tshirt2,
   },
 
   {
     id: 4,
-    name: "SKU-8 FUTURISTIC",
+    name: "FUTURISTIC",
     
     image: tshirt3,
   },
 
   {
     id: 5,
-    name: "SKU-4 MOHALLA AUNTY",
+    name: "MOHALLA AUNTY",
     
     image: tshirt4,
   },
@@ -48,7 +48,7 @@ const products = [
 
   {
     id: 6,
-    name: "SKU-2 RANGBAJI",
+    name: "RANGBAJI",
     
     image: tshirt5,
   },
@@ -57,7 +57,7 @@ const products = [
   
   {
     id: 7,
-    name: "SKU-1 RAGINI",
+    name: "RAGINI",
     
     image: tshirt6,
   },
@@ -65,7 +65,7 @@ const products = [
 
   {
     id: 8,
-    name: "SKU-6 TRINETRA",
+    name: "TRINETRA",
     
     image: tshirt7,
   },
@@ -73,7 +73,7 @@ const products = [
 
   {
     id: 9,
-    name: "SKU-7 BABY-BABY",
+    name: "BABY-BABY",
     
     image: tshirt8,
   },
@@ -82,7 +82,7 @@ const products = [
 
   {
     id: 10,
-    name: "SKU-10 DYNK",
+    name: "DYNK",
     
     image: tshirt9,
   },

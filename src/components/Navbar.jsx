@@ -44,8 +44,8 @@ const Navbar = () => {
   />
 
   <div className="leading-tight">
-    <h1 className="font-bold text-base sm:text-xl lg:text-3xl text-[#A86B00]">
-      Dynique Bharat
+    <h1 className="font-bold text-base sm:text-xl lg:text-xl text-[#A86B00]">
+      DYNIQUE BHARAT
     </h1>
 
     <p className="hidden md:block text-[10px] lg:text-xs uppercase tracking-[0.2em] text-gray-500">

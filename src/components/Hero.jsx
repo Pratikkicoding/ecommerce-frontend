@@ -52,23 +52,12 @@ const Hero = () => {
   };
 
   return (
-   <section className="relative h-[35vh] sm:h-[45vh] md:h-[60vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden">
+   <section className="relative aspect-[1920/900] w-full overflow-hidden">
       {/* Background Image */}
 <img
   src={slides[currentSlide].image}
   alt=""
-  className="
-    absolute
-    inset-0
-    w-full
-    h-full
-    object-contain
-    lg:object-cover
-    object-center
-    bg-[#8b6a62]
-    transition-all
-    duration-700
-  "
+  className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-700"
 />
 
       {/* Overlay */}

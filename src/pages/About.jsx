@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div className="bg-white py-16">
       <div className="max-w-5xl mx-auto px-6">

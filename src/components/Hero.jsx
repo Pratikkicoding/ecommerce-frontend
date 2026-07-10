@@ -52,72 +52,89 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-[700px] overflow-hidden">
+   <section className="relative h-[35vh] sm:h-[45vh] md:h-[60vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden">
       {/* Background Image */}
-    <img
+<img
   src={slides[currentSlide].image}
   alt=""
-  className="absolute inset-0 w-full h-full object-contain bg-white transition-all duration-1000"
+  className="
+    absolute
+    inset-0
+    w-full
+    h-full
+    object-contain
+    lg:object-cover
+    object-center
+    bg-[#8b6a62]
+    transition-all
+    duration-700
+  "
 />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+     <div className="absolute inset-0 bg-black/25 md:bg-black/35" />
 
       {/* Left Arrow */}
       <button
-        onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/40 transition"
-      >
-        <ChevronLeft size={30} className="text-white" />
-      </button>
+  onClick={prevSlide}
+  className="absolute left-3 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full p-2 md:p-3 transition"
+>
+  <ChevronLeft className="text-white w-5 h-5 md:w-8 md:h-8" />
+</button>
 
-      {/* Right Arrow */}
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/40 transition"
-      >
-        <ChevronRight size={30} className="text-white" />
-      </button>
+<button
+  onClick={nextSlide}
+  className="absolute right-3 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full p-2 md:p-3 transition"
+>
+  <ChevronRight className="text-white w-5 h-5 md:w-8 md:h-8" />
+</button>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-6">
-       <div
-  key={currentSlide}
-  className="animate-in fade-in duration-700 slide-in-from-bottom-5"
->
-  <h1 className="text-4xl md:text-7xl font-bold mb-6">
-    {slides[currentSlide].title}
-  </h1>
+     <div className="relative z-10 flex h-full items-center justify-center text-center px-5">
 
-  <p className="text-lg md:text-2xl mb-4 max-w-3xl">
-    {slides[currentSlide].subtitle}
-  </p>
+  <div
+    key={currentSlide}
+    className="max-w-4xl animate-in fade-in duration-700"
+  >
 
-  <p className="text-base md:text-lg text-gray-200 mb-8">
-    {slides[currentSlide].description}
-  </p>
+    {slides[currentSlide].title && (
+      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+        {slides[currentSlide].title}
+      </h1>
+    )}
 
- {/* <button className="bg-[#A86B00] hover:bg-[#8b5900] px-8 py-3 rounded-lg font-semibold transition hover:scale-105">
-    Shop Now
-  </button>*/}
+    {slides[currentSlide].subtitle && (
+      <p className="text-sm sm:text-lg md:text-2xl text-white mb-3">
+        {slides[currentSlide].subtitle}
+      </p>
+    )}
+
+    {slides[currentSlide].description && (
+      <p className="text-sm md:text-lg text-gray-200">
+        {slides[currentSlide].description}
+      </p>
+    )}
+
+  </div>
+
 </div>
-      </div>
 
       {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`h-3 w-3 rounded-full transition-all duration-300 ${
-              currentSlide === index
-                ? "bg-white scale-125"
-                : "bg-white/50"
-            }`}
-          />
-          
-        ))}
-      </div>
+    <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 md:gap-3 z-20">
+
+  {slides.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => setCurrentSlide(index)}
+      className={`rounded-full transition-all duration-300 ${
+        currentSlide === index
+          ? "bg-white w-8 h-2"
+          : "bg-white/50 w-2 h-2"
+      }`}
+    />
+  ))}
+
+</div>
     </section>
   );
 };

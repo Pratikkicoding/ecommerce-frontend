@@ -1,73 +1,91 @@
 import React from "react";
 import ProductCard from "./ProductCard";
-
+import tshirt from "../assets/tshirt.webp";
+import tshirt1 from "../assets/tshirt1.webp";
+import tshirt2 from "../assets/tshirt2.webp";
+import tshirt3 from "../assets/tshirt3.webp";
+import tshirt4 from "../assets/tshirt4.webp";
+import tshirt5 from "../assets/tshirt5.webp";
+import tshirt6 from "../assets/tshirt6.webp";
+import tshirt7 from "../assets/tshirt7.webp";
+import tshirt8 from "../assets/tshirt8.webp";
+import tshirt9 from "../assets/tshirt9.webp";
 const products = [
- 
   {
     id: 1,
-    name: "Kids Traditional Wear",
-    price: 999,
-    image:
-      "https://images.unsplash.com/photo-1771340590455-a0597478e091?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8S2lkcyUyMFRyYWRpdGlvbmFsJTIwV2VhcnxlbnwwfHwwfHx8MA%3D%3D",
+    name: "SKU-3 DADI'S SWAG",
+    
+    image: tshirt,
   },
   {
     id: 2,
-    name: "Mens T-Shirt",
-    price: 1,
-    image:
-      "https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 3,
-    name: "Women's Designer Suit",
-    price: 2499,
-    image:
-      "https://images.unsplash.com/photo-1610312713011-25e74e59cfca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFdvbWVuJ3MlMjBEZXNpZ25lciUyMFN1aXR8ZW58MHx8MHx8fDA%3D",
+    name: "SKU-9 IRONMAN",
+    
+    image: tshirt1,
   },
 
+  {
+    id: 3,
+    name: "SKU-5 PARLE-G",
+    
+    image: tshirt2,
+  },
 
   {
     id: 4,
-    name: "Women's Designer Suit",
-    price: 2499,
-    image:
-      "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "SKU-8 FUTURISTIC",
+    
+    image: tshirt3,
   },
 
-
-
- {
+  {
     id: 5,
-    name: "Kids Wear",
-    price: 999,
-    image:
-      "https://images.unsplash.com/photo-1604303768345-038b79a8c47a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGtpZHMlMjBjbG90aGVzfGVufDB8fDB8fHww",
+    name: "SKU-4 MOHALLA AUNTY",
+    
+    image: tshirt4,
   },
+  
+
   {
     id: 6,
-    name: "Men's Cotton T-Shirt",
-    price: 1299,
-    image:
-      "https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "SKU-2 RANGBAJI",
+    
+    image: tshirt5,
   },
+
+
+  
   {
     id: 7,
-    name: "Women's Designer Suit",
-    price: 2499,
-    image:
-      "https://images.unsplash.com/photo-1610312713011-25e74e59cfca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFdvbWVuJ3MlMjBEZXNpZ25lciUyMFN1aXR8ZW58MHx8MHx8fDA%3D",
+    name: "SKU-1 RAGINI",
+    
+    image: tshirt6,
   },
 
 
   {
     id: 8,
-    name: "Women's Designer Suit",
-    price: 2499,
-    image:
-      "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "SKU-6 TRINETRA",
+    
+    image: tshirt7,
   },
 
 
+  {
+    id: 9,
+    name: "SKU-7 BABY-BABY",
+    
+    image: tshirt8,
+  },
+
+
+
+  {
+    id: 10,
+    name: "SKU-10 DYNK",
+    
+    image: tshirt9,
+  },
 
 ];
 

@@ -1,217 +1,438 @@
-import React from "react";
+import React, { useState } from "react";
 import {
-  ShoppingCart,
-  User,
+  Menu,
+  X,
   Search,
-  Heart,
   ChevronDown,
 } from "lucide-react";
 
 const Navbar = () => {
+  const [mobileMenu, setMobileMenu] = useState(false);
+
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-black text-white text-sm">
-        <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between">
+      {/* ================= TOP BAR ================= */}
+
+      <div className="bg-black text-white text-xs sm:text-sm">
+        <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
           <span>🚚 Free Shipping on Orders Above ₹999</span>
-          <span>📞 +91 9631091472</span>
+
+          {/*<span className="hidden sm:block">
+            📞 +91 9631091472
+          </span>*/}
         </div>
       </div>
 
-      {/* Main Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-full px-2">
-          <div className="flex items-center justify-between h-20 gap-6">
+      {/* ================= HEADER ================= */}
 
-            {/* Logo */}
-           {/* Logo */}
-<div className="flex items-center gap-4 cursor-pointer shrink-0">
+      <header className="sticky top-0 z-50 bg-white shadow">
+
+        <div className="w-full pl-2 pr-4 lg:pl-4 lg:pr-8">
+
+          <div className="flex justify-between items-center h-16 lg:h-20">
+
+            {/* ================= LOGO ================= */}
+
+            <a
+  href="/"
+  className="flex items-center gap-2 md:gap-3 shrink-0"
+>
   <img
     src="/logo.png"
     alt="Dynique Bharat"
-    className="h-16 w-16 lg:h-28 lg:w-28 object-contain"
+    className="w-16 h-16 sm:w-12 sm:h-12 lg:w-18 lg:h-18 object-contain"
   />
 
-  <div>
-    <h1 className="text-2xl lg:text-3xl font-bold text-[#A86B00]">
+  <div className="leading-tight">
+    <h1 className="font-bold text-base sm:text-xl lg:text-3xl text-[#A86B00]">
       Dynique Bharat
     </h1>
 
-    <p className="text-xs text-gray-500 tracking-widest uppercase">
+    <p className="hidden md:block text-[10px] lg:text-xs uppercase tracking-[0.2em] text-gray-500">
       Premium Collection
     </p>
   </div>
-</div>
+</a>
+            {/* ================= DESKTOP MENU ================= */}
 
-            {/* Navigation */}
-            <nav className="hidden lg:flex items-center gap-8 font-medium whitespace-nowrap">
-              <a href="/" className="hover:text-[#A86B00] transition">
+            <nav className="hidden lg:flex items-center gap-8 font-medium">
+
+              <a
+                href="/"
+                className="hover:text-[#A86B00]"
+              >
                 Home
               </a>
 
-              {/*<div className="flex items-center gap-1 cursor-pointer hover:text-[#A86B00]">
-                Categories
-                <ChevronDown size={16} />
-              </div>*/}
+              {/* MEN */}
 
-             {/*<a href="#" className="hover:text-[#A86B00] transition">
-                Men
-              </a>*/}
+              <div className="relative group">
 
-<div className="relative group">
-  <a href="#" className="hover:text-[#A86B00] transition">
-    Men
-  </a>
+                <button className="flex items-center gap-1 hover:text-[#A86B00]">
 
-  <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-52 z-50">
-    <ul className="space-y-2">
-      <li><a href="#">T-Shirts</a></li>
-      <li><a href="#">Shirts</a></li>
-      <li><a href="#">Jeans</a></li>
-      <li><a href="#">Trousers</a></li>
-      <li><a href="#">Hoodies</a></li>
-      <li><a href="#">Jackets</a></li>
-    </ul>
-  </div>
-</div>
+                  Men
 
+                  <ChevronDown size={16} />
 
+                </button>
 
+                <div className="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-lg w-56 p-4">
 
-             {/*} <a href="#" className="hover:text-[#A86B00] transition">
-                Women
-              </a>*/}
+                  <ul className="space-y-3">
 
-<div className="relative group">
-  <a href="#" className="hover:text-[#A86B00] transition">
-    Women
-  </a>
+                    <li><a href="#">T-Shirts</a></li>
 
-  <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-52 z-50">
-    <ul className="space-y-2">
-      <li><a href="#">Saree</a></li>
-      <li><a href="#">Kurti</a></li>
-      <li><a href="#">Tops</a></li>
-      <li><a href="#">Jeans</a></li>
-      <li><a href="#">Gowns</a></li>
-      <li><a href="#">Nightwear</a></li>
-    </ul>
-  </div>
-</div>
+                    <li><a href="#">Shirts</a></li>
 
+                    <li><a href="#">Jeans</a></li>
 
+                    <li><a href="#">Trousers</a></li>
 
+                    <li><a href="#">Hoodies</a></li>
 
+                    <li><a href="#">Jackets</a></li>
 
+                  </ul>
 
-             
+                </div>
 
-            {/*  <a href="#" className="hover:text-[#A86B00] transition">
-                Kids
-              </a>*/}
+              </div>
 
+              {/* WOMEN */}
 
-<div className="relative group">
-  <a href="#" className="hover:text-[#A86B00] transition">
-    Kids
-  </a>
+              <div className="relative group">
 
-  <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-52 z-50">
-    <ul className="space-y-2">
-      <li><a href="#">Boys T-Shirts</a></li>
-      <li><a href="#">Girls Dresses</a></li>
-      <li><a href="#">Baby Clothing</a></li>
-      <li><a href="#">Party Wear</a></li>
-      <li><a href="#">Winter Wear</a></li>
-    </ul>
-  </div>
-</div>
+                <button className="flex items-center gap-1 hover:text-[#A86B00]">
 
+                  Women
 
+                  <ChevronDown size={16} />
 
+                </button>
 
+                <div className="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-lg w-56 p-4">
 
+                  <ul className="space-y-3">
 
+                    <li><a href="#">Saree</a></li>
 
-              <a href="#" className="hover:text-[#A86B00] transition">
+                    <li><a href="#">Kurti</a></li>
+
+                    <li><a href="#">Tops</a></li>
+
+                    <li><a href="#">Jeans</a></li>
+
+                    <li><a href="#">Night Wear</a></li>
+
+                    <li><a href="#">Gowns</a></li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+
+              {/* KIDS */}
+
+              <div className="relative group">
+
+                <button className="flex items-center gap-1 hover:text-[#A86B00]">
+
+                  Kids
+
+                  <ChevronDown size={16} />
+
+                </button>
+
+                <div className="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-lg w-56 p-4">
+
+                  <ul className="space-y-3">
+
+                    <li><a href="#">Boys</a></li>
+
+                    <li><a href="#">Girls</a></li>
+
+                    <li><a href="#">Baby Clothing</a></li>
+
+                    <li><a href="#">Party Wear</a></li>
+
+                    <li><a href="#">Winter Wear</a></li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+
+              <a
+                href="#"
+                className="hover:text-[#A86B00]"
+              >
                 New Arrivals
               </a>
+
             </nav>
 
-            {/* Search */}
-            <div className="hidden md:flex flex-1 max-w-md">
-              <div className="flex items-center w-full border border-gray-300 rounded-full overflow-hidden">
+            {/* ================= SEARCH ================= */}
+
+            <div className="hidden lg:flex flex-1 max-w-md ml-8">
+
+              <div className="flex w-full border rounded-full overflow-hidden">
+
                 <input
                   type="text"
-                  placeholder="Search products..."
-                  className="w-full px-4 py-3 outline-none"
+                  placeholder="Search Products..."
+                  className="flex-1 px-4 py-3 outline-none"
                 />
 
-                <button className="bg-[#A86B00] text-white px-5 py-3">
+                <button className="bg-[#A86B00] px-5 text-white">
+
                   <Search size={20} />
+
                 </button>
+
               </div>
-            </div>
-
-            {/* Right Icons */}
-            <div className="flex items-center gap-5">
-
-            {/* <Heart
-                size={22}
-                className="cursor-pointer hover:text-red-500 transition"
-              />
-
-             {/* <div className="flex items-center gap-2 cursor-pointer hover:text-[#A86B00]">
-                <User size={22} />
-                <span className="hidden xl:block text-sm">
-                  Account
-                </span>
-              </div>*/}
-
-             {/* <div className="relative flex items-center gap-2 cursor-pointer hover:text-[#A86B00]">
-                <ShoppingCart size={24} />
-
-                <span className="absolute -top-2 left-4 bg-[#A86B00] text-white text-xs h-5 w-5 rounded-full flex items-center justify-center">
-                  2
-                </span>
-
-               <span className="hidden xl:block text-sm">
-                  Cart
-                </span>
-              </div>*/}
 
             </div>
+
+            {/* ================= HAMBURGER ================= */}
+
+            <button
+              onClick={() => setMobileMenu(true)}
+              className="lg:hidden"
+            >
+              <Menu size={30} />
+            </button>
 
           </div>
+
         </div>
+
       </header>
+            {/* ================= MOBILE MENU ================= */}
 
-      {/* Category Bar */}
-      <div className="border-t border-b bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-center gap-10 py-3 text-sm font-medium overflow-x-auto">
+      {mobileMenu && (
+        <>
+          {/* Overlay */}
 
-            <a href="#" className="hover:text-[#A86B00]">
+          <div
+            onClick={() => setMobileMenu(false)}
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          ></div>
+
+          {/* Sidebar */}
+
+          <div className="fixed top-0 left-0 w-72 h-screen bg-white z-50 shadow-xl overflow-y-auto lg:hidden transition-all duration-300">
+
+            {/* Header */}
+
+            <div className="flex items-center justify-between px-5 py-4 border-b">
+
+              <div>
+
+                <h2 className="text-xl font-bold text-[#A86B00]">
+                  Dynique Bharat
+                </h2>
+
+                <p className="text-xs text-gray-500">
+                  Premium Collection
+                </p>
+
+              </div>
+
+              <button
+                onClick={() => setMobileMenu(false)}
+              >
+                <X size={28} />
+              </button>
+
+            </div>
+
+            {/* Search */}
+
+            <div className="p-4">
+
+              <div className="flex border rounded-full overflow-hidden">
+
+                <input
+                  type="text"
+                  placeholder="Search Products..."
+                  className="flex-1 px-4 py-3 outline-none"
+                />
+
+                <button className="bg-[#A86B00] text-white px-5">
+
+                  <Search size={20} />
+
+                </button>
+
+              </div>
+
+            </div>
+
+            {/* Navigation */}
+
+            <nav className="flex flex-col pb-10">
+
+              <a
+                href="/"
+                className="px-5 py-4 border-b hover:bg-gray-100"
+                onClick={() => setMobileMenu(false)}
+              >
+                Home
+              </a>
+
+              {/* MEN */}
+
+              <details className="border-b">
+
+                <summary className="px-5 py-4 cursor-pointer font-medium">
+                  Men
+                </summary>
+
+                <div className="flex flex-col pl-10 pb-3 gap-3 text-gray-600">
+
+                  <a href="#">T-Shirts</a>
+
+                  <a href="#">Shirts</a>
+
+                  <a href="#">Jeans</a>
+
+                  <a href="#">Trousers</a>
+
+                  <a href="#">Hoodies</a>
+
+                  <a href="#">Jackets</a>
+
+                </div>
+
+              </details>
+
+              {/* WOMEN */}
+
+              <details className="border-b">
+
+                <summary className="px-5 py-4 cursor-pointer font-medium">
+                  Women
+                </summary>
+
+                <div className="flex flex-col pl-10 pb-3 gap-3 text-gray-600">
+
+                  <a href="#">Saree</a>
+
+                  <a href="#">Kurti</a>
+
+                  <a href="#">Tops</a>
+
+                  <a href="#">Jeans</a>
+
+                  <a href="#">Night Wear</a>
+
+                  <a href="#">Gowns</a>
+
+                </div>
+
+              </details>
+
+              {/* KIDS */}
+
+              <details className="border-b">
+
+                <summary className="px-5 py-4 cursor-pointer font-medium">
+                  Kids
+                </summary>
+
+                <div className="flex flex-col pl-10 pb-3 gap-3 text-gray-600">
+
+                  <a href="#">Boys</a>
+
+                  <a href="#">Girls</a>
+
+                  <a href="#">Baby Clothing</a>
+
+                  <a href="#">Party Wear</a>
+
+                  <a href="#">Winter Wear</a>
+
+                </div>
+
+              </details>
+
+              <a
+                href="#"
+                className="px-5 py-4 border-b hover:bg-gray-100"
+              >
+                New Arrivals
+              </a>
+
+            </nav>
+
+          </div>
+        </>
+      )}
+            {/* ================= CATEGORY BAR ================= */}
+
+      <div className="border-y bg-gray-50">
+
+        <div className="max-w-7xl mx-auto">
+
+          <div className="flex items-center gap-6 lg:gap-10 overflow-x-auto whitespace-nowrap px-4 py-3 text-sm font-medium scrollbar-hide">
+
+            <a
+              href="#"
+              className="hover:text-[#A86B00] transition"
+            >
               🔥 Trending
             </a>
 
-            <a href="#" className="hover:text-[#A86B00]">
+            <a
+              href="#"
+              className="hover:text-[#A86B00] transition"
+            >
               👕 Clothing
             </a>
 
-            <a href="#" className="hover:text-[#A86B00]">
+            <a
+              href="#"
+              className="hover:text-[#A86B00] transition"
+            >
+              👨 Men
+            </a>
+
+            <a
+              href="#"
+              className="hover:text-[#A86B00] transition"
+            >
+              👩 Women
+            </a>
+
+            <a
+              href="#"
+              className="hover:text-[#A86B00] transition"
+            >
               🧒 Kids
             </a>
 
-           
-           
-            <a href="#" className="hover:text-[#A86B00]">
+            <a
+              href="#"
+              className="hover:text-[#A86B00] transition"
+            >
               🎁 Offers
             </a>
 
+            <a
+              href="#"
+              className="hover:text-[#A86B00] transition"
+            >
+              ⭐ Best Sellers
+            </a>
+
           </div>
+
         </div>
+
       </div>
+
     </>
   );
 };

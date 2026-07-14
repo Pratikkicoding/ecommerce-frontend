@@ -82,7 +82,7 @@ const products = [
 
   {
     id: 10,
-    name: "DYNK",
+    name: "DYNQ",
     
     image: tshirt9,
   },
